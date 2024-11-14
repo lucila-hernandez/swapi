@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Character Search</title>
+</head>
+<body>
+    <h1>Star Wars Character Details</h1>
+
+    {% if character_data %}
+        <h2>Character Details:</h2>
+        <ul>
+            <li><strong>Name:</strong> {{ character_data.name }}</li>
+            <li><strong>Height:</strong> {{ character_data.height }} cm</li>
+            <li><strong>Mass:</strong> {{ character_data.mass }} kg</li>
+            <li><strong>Hair Color:</strong> {{ character_data.hair_color }}</li>
+            <li><strong>Eye Color:</strong> {{ character_data.eye_color }}</li>
+        </ul>
+    {% else %}
+        <p>No character data available.</p>
+    {% endif %}
+</body>
+</html>
+
